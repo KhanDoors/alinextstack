@@ -5,8 +5,8 @@ import { AmplifyS3Image } from "@aws-amplify/ui-react";
 import Link from "next/link";
 
 export async function getStaticProps() {
-  // const SSR = withSSRContext();
-  const { data } = await API.graphql({ query: listParks });
+  const SSR = withSSRContext();
+  const { data } = await SSR.API.graphql({ query: listParks });
   return {
     props: {
       parks: data.listParks.items,
