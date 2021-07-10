@@ -1,12 +1,12 @@
 import Head from "next/head";
-import { withSSRContext } from "aws-amplify";
+import { API, withSSRContext } from "aws-amplify";
 import { listParks } from "../src/graphql/queries";
 import { AmplifyS3Image } from "@aws-amplify/ui-react";
 import Link from "next/link";
 
 export async function getStaticProps() {
-  const SSR = withSSRContext();
-  const { data } = await SSR.API.graphql({ query: listParks });
+  // const SSR = withSSRContext();
+  const { data } = await API.graphql({ query: listParks });
   return {
     props: {
       parks: data.listParks.items,
