@@ -15,7 +15,7 @@ import React, { useEffect, useState } from "react";
 //   };
 // }
 
-export default function Home({ parks }) {
+export default function Home() {
   const [parks, setParks] = useState([]);
 
   useEffect(() => {
