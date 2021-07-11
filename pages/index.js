@@ -18,7 +18,7 @@ export default function Home({ parks }) {
   return (
     <div>
       <Head>
-        <title>National Parks</title>
+        <title>National Parks!!!!!!</title>
       </Head>
       <div className="container">
         <h1>
